@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            .title {
+                margin-left: 100px;
+                margin-bottom: 25px;
+                font-size: 20px
+            }
+            .container {
+                /* IMPORTANT The height of the graph defines the scale of which we need to use in our 
+                calculations. */
+                height: 500px;
+                width: 500px;
+                background-color: lightgrey;
+                display: flex;
+                margin-left: 100px;
+                border-left: 2px solid black;
+                border-bottom: 2px solid black;
+                flex-direction: row;
+                align-items: flex-end;
+                justify-content: space-around;
+            }
+            .tableOne {
+                width: 70px;
+                /*  IMPORTANT This is the part where I caclulate the difference in height between the two staples:
+                 Since the whole height of the graph is 500px, but we want it to represent $1,
+                 we need to scale down the price. this means we need to divide our price by 2, and then multiply by 1000
+                 hydroelectric has a cost of $0.85 per kwh.
+                 0.85/2 * 1000
+                 = 0.425 * 1000
+                 = 425*/
+                height: 425px;
+                background-color: red;
+                border-top-right-radius: 10px;
+                border-top-left-radius: 10px;
+            }
+            .tableTwo {
+                width: 70px;
+                /*  IMPORTANT This is the part where I caclulate the difference in height between the two staples:
+                 Since the whole height of the graph is 500px, but we want it to represent $1,
+                 we need to scale down the price. this means we need to divide our price by 2, and then multiply by 1000
+                 gethermal has a cost of $0.03 per kwh.
+                 0.03/2 * 1000
+                 = 0.15 * 1000
+                 = 15*/
+                height: 15px;
+                background-color: blue;
+                border-top-right-radius: 10px;
+                border-top-left-radius: 10px;
+            }  
+            .lineContainer {
+                position: relative;
+                bottom: 502px;
+                height: 500px;
+                width: 500px;
+                display: flex;
+                margin-left: 100px;
+                flex-direction: column;
+            } 
+            .lines {
+                width: 500px;
+                height: 100px;
+                border-top: 2px solid white;
+            } 
+            .meassurementContainer {
+                width: 50px;
+                height: 600px;
+                display: flex;
+                position: relative;
+                bottom: 1009px;
+                left: 65px;
+                flex-direction: column;
+            }
+            .meassurement {
+                width: 50px;
+                height: 100px;
+                color: black;
+            }
+            .costContainer {
+                width: 500px;
+                height: 30px;
+                display: flex;
+                position: relative;
+                bottom: 1100px;
+                left: 100px;
+                flex-direction: row;
+                align-items: flex-end;
+                justify-content: space-around;
+            }
+            .cost {
+                
+            }
+            .labelContainer {
+                width: 500px;
+                height: 30px;
+                display: flex;
+                position: relative;
+                bottom: 1110px;
+                left: 100px;
+                flex-direction: row;
+                align-items: flex-end;
+                justify-content: space-around;
+            }
+            .label {
+
+            }
+            .sources {
+                display: flex;
+                position: relative;
+                bottom: 1100px;
+                color: grey;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="title">
+            <b>Cents($) for one kwh</b>
+        </div>
+        <div class="container">
+            <div class="tableOne">
+
+            </div>
+            <div class="tableTwo">
+
+            </div>
+        </div>
+        <div class="lineContainer">
+            <div class="lines"></div>
+            <div class="lines"></div>
+            <div class="lines"></div>
+            <div class="lines"></div>
+            <div class="lines"></div>
+        </div>
+        <div class="meassurementContainer">
+            <div class="meassurement">$1</div>
+            <div class="meassurement">$0.8</div>
+            <div class="meassurement">$0.6</div>
+            <div class="meassurement">$0.4</div>
+            <div class="meassurement">$0.2</div>
+            <div class="meassurement">$0</div>
+        </div>
+        <div class="costContainer">
+            <div class="cost">$0.85</div>
+            <div class="cost">$0.03</div>
+        </div>
+        <div class="labelContainer">
+            <div class="label">HydroElectric</div>
+            <div class="label">GeoThermal</div>
+        </div>
+        <div class="sources">
+            <ul>
+                <li>Unknown, Unknown. Geothermal FAQs, www.energy.gov , &lt;https://www.energy.gov/eere/geothermal/geothermal-faqs&gt; [Last  accessed: 2019-01-24]</li>
+                <li>Unknown, Unknown. Facts About hydropower, www.wvic.com, &lt;http://www.wvic.com/Content/Facts_About_Hydropower.cfm&gt; [Last  accessed: 2019-01-24]</li>
+            </ul>
+        </div>
+    </body>
+</html>
